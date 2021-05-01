@@ -14,4 +14,41 @@
             <a asp-page="Create" class="btn btn-info"><i class="fas fa-plus"></i>&nbsp; Create new</a>
         </div>
     </div>
+    <br />
+    <div class="col-12">
+        @if (Model.ServiceTypes.Count == 0)
+        {
+            <p>No service type exists. Please create a new service type.</p>
+        }
+        else
+        {
+            <table class="table table-striped border">
+                <tr class="table-secondary">
+                    <th>
+                        @Html.DisplayNameFor(m => m.ServiceTypes[0].Name);
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(m => m.ServiceTypes[0].Price);
+                    </th>
+                    <th>
+
+                    </th>
+                </tr>
+                @foreach (var item in Model.ServiceTypes)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(m => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => item.Price)
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                }
+            </table>
+        }
+    </div>
 </div>
