@@ -1,0 +1,44 @@
+﻿@page
+@model SparkAuto.Pages.ServiceTypes.DetailsModel
+@{
+}
+
+<br />
+<h2 class="text-info">Edit service type</h2>
+<br />
+
+<div class="border background-white">
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="ServiceType.Name"></label>
+        </div>
+        <div class="col-5">
+            <input asp-for="ServiceType.Name" readonly class="form-control" />
+            <span asp-validation-for="ServiceType.Name" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="ServiceType.Price"></label>
+        </div>
+        <div class="col-5">
+            <input asp-for="ServiceType.Price" readonly class="form-control" />
+            <span asp-validation-for="ServiceType.Price" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-5 offset-2">
+            <div class="row">
+                <div class="col-6">
+                    <a asp-page="Edit" asp-route-id="@Model.ServiceType.Id" class="btn btn-info form-control" >Edit</a>
+                </div>
+                <div class="col-6">
+                    <a asp-page="Index" class="btn btn-success form-control">Back to list</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
