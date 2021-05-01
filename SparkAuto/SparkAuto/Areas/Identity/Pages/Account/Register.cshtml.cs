@@ -121,7 +121,7 @@ namespace SparkAuto.Areas.Identity.Pages.Account
                         await _roleManager.CreateAsync(new IdentityRole(SD.CUSTOME_END_USER));
                     }
 
-                    await _userManager.AddToRoleAsync(user, SD.ADMIN_END_USER);
+                    await _userManager.AddToRoleAsync(user, SD.CUSTOME_END_USER);
 
                     _logger.LogInformation("User created a new account with password.");
 
